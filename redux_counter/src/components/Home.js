@@ -57,13 +57,13 @@ const Home = () => {
     ))}
     </tbody>
     <div className='pagination'>
-    <button style={{display: currentPage != 1 ? "" : "none" }} onClick={()=> setCurrentPage(currentPage != 1 ? currentPage-1 : currentPage)}>Previous</button>
+    <button style={{display: currentPage !== 1 ? "" : "none" }} onClick={()=> setCurrentPage(currentPage !== 1 ? currentPage-1 : currentPage)}>Previous</button>
     {
         pagesArray.map((page,index)=>(
             <span onClick={()=> setCurrentPage(page)} style={{fontSize : page == currentPage ? "25px":"15px", color:currentPage == page ? "blue":""}}>{`${page} |`}</span>
         ))
     }
-    <button style={{display: currentPage != pages ? "" : "none" }} onClick={()=> setCurrentPage(currentPage != pages ? currentPage + 1 : currentPage)}>Next</button>
+    <button style={{display: currentPage !== pages ? "" : "none" }} onClick={()=> setCurrentPage(currentPage !== pages ? currentPage + 1 : currentPage)}>Next</button>
     </div>
     </table>
     </>
